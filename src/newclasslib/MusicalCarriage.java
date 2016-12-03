@@ -1,4 +1,4 @@
-package classlib;
+package newclasslib;
 
 public class MusicalCarriage implements Carriage, Jukebox {
 	// 实现rock方法

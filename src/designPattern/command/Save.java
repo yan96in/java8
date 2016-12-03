@@ -15,7 +15,6 @@ public class Save implements Action {
 	}
 	@Override
 	public void perform() {
-		// TODO Auto-generated method stub
 		editor.save();
 	}
 

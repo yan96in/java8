@@ -1,4 +1,4 @@
-package classlib;
+package newclasslib;
 
 public interface Child extends Parent {
 

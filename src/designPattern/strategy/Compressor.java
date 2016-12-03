@@ -38,7 +38,7 @@ public class Compressor {
 		zipCompressor.compress(inFile, outFile);
 	}
 
-	// 使用方法引用初始化Compressor
+	// 使用方法引用初始化Compressor，此时不需要额外的实现类。
 	public static void lambdaBasedExample(Path inFile, File outFile) throws IOException {
 		Compressor gzipCompressor = new Compressor(GZIPOutputStream::new);
 		gzipCompressor.compress(inFile, outFile);

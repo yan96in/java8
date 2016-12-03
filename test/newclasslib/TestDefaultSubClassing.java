@@ -1,6 +1,13 @@
-package classlib;
+package newclasslib;
 
 import org.junit.Test;
+
+import newclasslib.Child;
+import newclasslib.ChildImpl;
+import newclasslib.OverridingChild;
+import newclasslib.OverridingParent;
+import newclasslib.Parent;
+import newclasslib.ParentImpl;
 
 import static org.junit.Assert.assertEquals;
 

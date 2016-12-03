@@ -36,9 +36,11 @@ public class EncounterOrderTest {
 
 	@Test
 	public void hashSetToStreamSorted() {
-		Set<Integer> numbers = new HashSet<>(asList(4, 3, 2, 1));
-
-		List<Integer> sameOrder = numbers.stream().sorted().collect(toList());
+		Set<Integer> numbers = new HashSet<>(asList(4, 2, 1, 3));
+		//通过sorted方法可以产生顺序
+		List<Integer> sameOrder = numbers.stream()
+				.sorted()
+				.collect(toList());
 		// 生成出现顺序
 		assertEquals(asList(1, 2, 3, 4), sameOrder);
 	}
@@ -46,10 +48,9 @@ public class EncounterOrderTest {
 	@Test
 	public void toStreamMapped() {
 		List<Integer> numbers = asList(1, 2, 3, 4);
-
+		//有些操作会产生顺序，比如键值对映射，映射后的值是有序的，这种顺序会保留下来。
 		List<Integer> stillOrdered = numbers.stream().map(x -> x + 1).collect(toList());
-
-		assertEquals(asList(2, 3, 4, 5), stillOrdered);
+		assertEquals(asList(2, 3, 4, 5), stillOrdered);//顺序得到保留
 
 		Set<Integer> unordered = new HashSet<>(numbers);
 		

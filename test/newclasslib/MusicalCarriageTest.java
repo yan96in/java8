@@ -1,7 +1,9 @@
-package classlib;
+package newclasslib;
 
 
 import junit.framework.Assert;
+import newclasslib.MusicalCarriage;
+
 import org.junit.Test;
 
 public class MusicalCarriageTest {

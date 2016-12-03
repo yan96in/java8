@@ -49,7 +49,7 @@ public class StreamExample {
 				count++;
 			}
 		}
-		// 使用 内部迭代 计算来自伦敦的艺术家人数，返回的不是控制迭代的Iterator对象，而是接口：Stream
+		//使用 内部迭代 计算来自伦敦的艺术家人数，返回的不是控制迭代的Iterator对象，而是接口：Stream
 		long count8 = allArtists.stream().filter(artist -> artist.isFrom("London")).count();//两步，但不需要两次循环
 		//filter方法只过滤，不计数，是惰性求值
 		allArtists.stream().filter(artist->{
@@ -117,7 +117,7 @@ public class StreamExample {
 				new Track("Violets for your furs",378),
 				new Track("Time Was",451));
 		Track shortestTrack=tracks.stream()
-				.min(Comparator.comparing(track->track.getLength()))//comparing是java8新提供的静态方法,接受一个函数，返回另一个函数。
+				.max(Comparator.comparing(track->track.getLength()))//comparing是java8新提供的静态方法,接受一个函数，返回另一个函数。
 				.get();//通过get方法可以取出Optional对象的值
 		assertEquals(tracks.get(1),shortestTrack);
 	}
@@ -167,7 +167,7 @@ public class StreamExample {
 	/*多次调用和链式调用相比有如下缺点：
 	 * 代码可读性差
 	 * 效率差
-	 * 代码充斥了一堆垃圾变量，只是用来保存中间结果
+	 * 代码充斥了一堆只是用来保存中间结果的垃圾变量，
 	 * 难于自动并行处理。
 	 * 
 	 * 

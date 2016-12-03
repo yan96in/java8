@@ -27,7 +27,7 @@ public class CollectorExamples {
 		Function<Artist, Long> getCount = artist -> artist.getMembers().count();
 		return artists.collect(maxBy(comparing(getCount)));
 	}
-	//将艺术家组成但流粉刺乐队和独唱歌手两部分
+	//将艺术家组成的流分成乐队和独唱歌手两部分
 	public Map<Boolean, List<Artist>> bandsAndSolo(Stream<Artist> artists) {
 		return artists.collect(partitioningBy(artist -> artist.isSolo()));
 	}

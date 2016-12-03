@@ -18,7 +18,7 @@ import javax.swing.text.DateFormatter;
 public class Lambda {
 	JButton button;
 
-	void function() {//需要显式声明event，大量的样板代码
+	void function() {//需要显式声明参数类型，大量的样板代码
 		button.addActionListener(new ActionListener() {//ActionListener是函数接口
 
 			@Override

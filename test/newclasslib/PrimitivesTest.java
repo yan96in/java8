@@ -1,7 +1,8 @@
-package classlib;
+package newclasslib;
 
 import org.junit.Test;
 
+import newclasslib.Primitives;
 import stream.SampleData;
 
 public class PrimitivesTest {

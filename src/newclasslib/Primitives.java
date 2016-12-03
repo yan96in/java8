@@ -1,4 +1,4 @@
-package classlib;
+package newclasslib;
 
 import java.util.IntSummaryStatistics;
 

@@ -15,7 +15,6 @@ public class Close implements Action {
 	}
 	@Override
 	public void perform() {
-		// TODO Auto-generated method stub
 		editor.close();
 	}
 
